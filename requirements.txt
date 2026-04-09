@@ -1,5 +1,5 @@
 streamlit==1.35.0
 pillow
-pdfplumber==0.10.3
+pymupdf
 python-docx
 pytesseract
