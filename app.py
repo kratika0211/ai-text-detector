@@ -1,6 +1,6 @@
 import streamlit as st
 from PIL import Image
-import pdfplumber
+import fitz
 import docx
 import pytesseract
 import re
@@ -36,11 +36,13 @@ if option == "✍️ Manual Text":
 # ------------------------------
 elif option == "📄 PDF":
     file = st.file_uploader("Upload PDF", type=["pdf"])
-    if file:
-        with pdfplumber.open(file) as pdf:
-            pages = [p.extract_text() for p in pdf.pages if p.extract_text()]
-            text = "\n".join(pages)
-        st.success("PDF loaded")
+if file:
+    with fitz.open(stream=file.read(), filetype="pdf") as doc:
+        text = ""
+        for page in doc:
+            text += page.get_text()
+
+    st.success("PDF loaded")
 
 # ------------------------------
 # WORD INPUT
