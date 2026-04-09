@@ -13,11 +13,10 @@ Supports multiple input formats including manual text, PDF, Word documents, and 
 
 📂 Project Structure
 ai-text-detector/
-│
-├── streamlit_app.py     # Main Streamlit UI
-├── requirements.txt     # Dependencies
-├── README.md            # Project documentation
-└── ai_detector_model/   # (Optional) Trained model
+├──streamlit_app.py     # Main Streamlit UI
+├──requirements.txt     # Dependencies
+├──README.md            # Project documentation
+└──ai_detector_model/   # (Optional) Trained model
 
 ⚙️ Installation (Local)
 1. Clone the repository
