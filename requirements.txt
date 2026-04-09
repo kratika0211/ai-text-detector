@@ -1,1 +1,5 @@
 streamlit
+pillow
+pdfplumber
+python-docx
+pytesseract
